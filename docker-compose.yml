@@ -16,9 +16,8 @@ services:
       - "3001:3001"
     networks: 
      - network-backend
-  
   mongo:
-    image: mongo
+    build: ./database
     restart: always
     volumes: 
       - mongodb_data:/data/db
